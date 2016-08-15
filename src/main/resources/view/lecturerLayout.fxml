@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="401.0" prefWidth="1060.0" xmlns="http://javafx.com/javafx/8"
+            fx:controller="tk.aizydorczyk.gradebook.controller.LecturerController">
+    <left>
+        <Accordion BorderPane.alignment="CENTER">
+            <panes>
+                <TitledPane animated="false" prefHeight="375.0" prefWidth="179.0" text="%grades">
+                    <content>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                            <children>
+                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="185.0" text="%addGrade"
+                                        GridPane.rowIndex="5"/>
+                                <ComboBox prefHeight="25.0" prefWidth="163.0" GridPane.rowIndex="2"/>
+                                <TextField fx:id="selectedNoTextField" disable="true" editable="false"/>
+                                <TextField fx:id="selectedSubjectTextField" disable="true" editable="false"
+                                           GridPane.rowIndex="1"/>
+                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="204.0" text="%deleteGrade"
+                                        GridPane.rowIndex="6"/>
+                                <TextField GridPane.rowIndex="4"/>
+                                <ComboBox prefHeight="25.0" prefWidth="168.0" GridPane.rowIndex="3"/>
+                            </children>
+                        </GridPane>
+                    </content>
+                </TitledPane>
+                <TitledPane animated="false" text="%groups">
+                    <content>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                            <children>
+                                <TextField/>
+                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="176.0" text="%createGroup"
+                                        GridPane.rowIndex="5"/>
+                                <TextField GridPane.rowIndex="1"/>
+                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="217.0" text="%addToGroup"
+                                        GridPane.rowIndex="2"/>
+                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="360.0"
+                                        text="%deleteFromGroup" GridPane.rowIndex="3"/>
+                            </children>
+                        </GridPane>
+                    </content>
+                </TitledPane>
+                <TitledPane animated="false" text="%topics">
+                    <content>
+                        <GridPane>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                            <children>
+                                <TextField/>
+                                <TextField GridPane.rowIndex="1"/>
+                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="156.0" text="%giveTopic"
+                                        GridPane.rowIndex="2"/>
+                                <TextField GridPane.rowIndex="4"/>
+                                <TextField GridPane.rowIndex="5"/>
+                                <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="250.0" text="%createTopic"
+                                        GridPane.rowIndex="6"/>
+                            </children>
+                        </GridPane>
+                    </content>
+                </TitledPane>
+            </panes>
+        </Accordion>
+    </left>
+    <right>
+        <GridPane prefHeight="398.0" prefWidth="122.0" BorderPane.alignment="CENTER">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            </rowConstraints>
+            <children>
+                <Button id="lecturerStudentsButton" mnemonicParsing="false" onAction="#lecturerStudentsClick"
+                        prefHeight="25.0" prefWidth="145.0" text="%lecturerStudents"/>
+                <Button mnemonicParsing="false" onAction="#lecturerGroupsClick" prefHeight="25.0" prefWidth="166.0"
+                        text="%lecturerGroups" GridPane.rowIndex="5"/>
+                <Button id="lecturerSubjectsButton" mnemonicParsing="false" onAction="#lecturerSubjectsClick"
+                        prefHeight="25.0" prefWidth="136.0" text="%lecturerSubjects" GridPane.rowIndex="2"/>
+                <Button mnemonicParsing="false" onAction="#lecturerDepartamentsClick" prefHeight="25.0"
+                        prefWidth="124.0" text="%lecturerDepartaments" GridPane.rowIndex="3"/>
+                <Button id="lecturerGradeButton" mnemonicParsing="false" onAction="#lecturerGradeClick"
+                        prefHeight="25.0" prefWidth="134.0" text="%lecturerGrade" GridPane.rowIndex="1"/>
+                <Button mnemonicParsing="false" onAction="#projectTopicsClick" prefHeight="25.0" prefWidth="182.0"
+                        text="%projectTopics" GridPane.rowIndex="4"/>
+                <Button mnemonicParsing="false" onAction="#memberOfGroupClick" prefHeight="25.0" prefWidth="164.0"
+                        text="%memberOfGroup" GridPane.rowIndex="6"/>
+            </children>
+        </GridPane>
+    </right>
+    <center>
+        <TableView id="lecturerTableView" fx:id="lecturerTableView" onMouseClicked="#lecturerTableViewClick"
+                   prefHeight="400.0" prefWidth="649.0" BorderPane.alignment="CENTER"/>
+    </center>
+    <top>
+        <Pane prefHeight="36.0" prefWidth="1060.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button id="logoutButton" fx:id="logoutButton" layoutX="970.0" layoutY="6.0" mnemonicParsing="false"
+                        onAction="#logoutButtonClick" prefHeight="25.0" prefWidth="76.0" text="%logout"/>
+            </children>
+        </Pane>
+    </top>
+</BorderPane>

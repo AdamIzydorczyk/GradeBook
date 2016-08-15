@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.Pane?>
+<Pane xmlns:fx="http://javafx.com/fxml/1" id="mainPane" fx:id="mainPane" xmlns="http://javafx.com/javafx/8"
+      fx:controller="tk.aizydorczyk.gradebook.controller.MainController">
+    <children>
+        <fx:include fx:id="loginLayout" source="loginLayout.fxml"/>
+        <fx:include fx:id="studentLayout" source="studentLayout.fxml"/>
+        <fx:include fx:id="teacherLayout" source="lecturerLayout.fxml"/>
+    </children>
+</Pane>
