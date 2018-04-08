@@ -50,7 +50,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <mainClass>tk.aizydorczyk.gradebook.app.GradeBookApplication</mainClass>
+                    <mainClass>tk.aizydorczyk.gradebook.infrastructure.GradeBookApplication</mainClass>
                 </configuration>
             </plugin>
             <plugin>
@@ -58,7 +58,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>8.6.0</version>
                 <configuration>
-                    <mainClass>tk.aizydorczyk.gradebook.app.GradeBookApplication</mainClass>
+                    <mainClass>tk.aizydorczyk.gradebook.infrastructure.GradeBookApplication</mainClass>
                 </configuration>
             </plugin>
         </plugins>

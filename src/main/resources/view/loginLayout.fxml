@@ -9,31 +9,30 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import java.lang.String?>
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity"
             prefHeight="345.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8"
-            fx:controller="tk.aizydorczyk.gradebook.controller.LoginController">
-    <children>
-        <Text layoutX="43.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%loginText"/>
-        <Text layoutX="43.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%passwordText"/>
-        <TextField id="loginTextField" fx:id="loginTextField" layoutX="183.0" layoutY="104.0"/>
-        <PasswordField id="passwordTextField" fx:id="passwordTextField" layoutX="183.0" layoutY="148.0"
-                       prefHeight="25.0" prefWidth="149.0"/>
-        <Button id="signInButton" fx:id="signInButton" layoutX="385.0" layoutY="279.0" mnemonicParsing="false"
-                onAction="#signInButtonClicked" prefHeight="29.0" prefWidth="180.0" text="%signIn"
-                textAlignment="RIGHT"/>
-        <Text layoutX="48.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@aizydorczyk">
-            <font>
-                <Font size="9.0"/>
-            </font>
-        </Text>
-        <ComboBox id="languageComboBox" fx:id="languageComboBox" layoutX="483.0" layoutY="14.0"
-                  onAction="#changeLanguage" prefHeight="25.0" prefWidth="82.0">
-            <items>
-                <FXCollections fx:factory="observableArrayList">
-                    <String fx:value="en"/>
-                    <String fx:value="pl"/>
-                </FXCollections>
-            </items>
-        </ComboBox>
-    </children>
+            fx:controller="tk.aizydorczyk.gradebook.login.LoginController">
+    <Text layoutX="43.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%loginText"/>
+    <Text layoutX="43.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%passwordText"/>
+    <TextField id="loginTextField" fx:id="loginTextField" layoutX="183.0" layoutY="104.0"/>
+    <PasswordField id="passwordTextField" fx:id="passwordTextField" layoutX="183.0" layoutY="148.0"
+                   prefHeight="25.0" prefWidth="149.0"/>
+    <Button id="signInButton" fx:id="signInButton" layoutX="385.0" layoutY="279.0" mnemonicParsing="false"
+            onAction="#signInButtonClicked" prefHeight="29.0" prefWidth="180.0" text="%signIn"
+            textAlignment="RIGHT"/>
+    <Text layoutX="48.0" layoutY="297.0" strokeType="OUTSIDE" strokeWidth="0.0" text="\@aizydorczyk">
+        <font>
+            <Font size="9.0"/>
+        </font>
+    </Text>
+    <ComboBox id="languageComboBox" fx:id="languageComboBox" layoutX="483.0" layoutY="14.0"
+              onAction="#changeLanguage" prefHeight="25.0" prefWidth="82.0">
+        <items>
+            <FXCollections fx:factory="observableArrayList">
+                <String fx:value="en"/>
+                <String fx:value="pl"/>
+            </FXCollections>
+        </items>
+    </ComboBox>
 </AnchorPane>
