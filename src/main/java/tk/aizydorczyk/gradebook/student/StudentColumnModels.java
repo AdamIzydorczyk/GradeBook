@@ -44,7 +44,6 @@ import static tk.aizydorczyk.gradebook.infrastructure.Constants.TOPIC;
 import static tk.aizydorczyk.gradebook.infrastructure.Constants.YEAR;
 import static tk.aizydorczyk.gradebook.infrastructure.utility.WindowContext.getLocalizedTableColumns;
 
-@SuppressWarnings("unchecked")
 public enum StudentColumnModels implements ColModel {
 	GRADE {
 		@Override

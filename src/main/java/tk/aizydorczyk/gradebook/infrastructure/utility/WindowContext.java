@@ -31,14 +31,7 @@ public class WindowContext {
 		GradeBookApplication.setLanguageBundle(languageBundle);
 	}
 
-	public static String getLocalizedText(String languageBundleKey) {
-		return GradeBookApplication.getLanguageBundle().getString(languageBundleKey);
-	}
-
-	private static <S, T> TableColumn<S, T> getLocalizedTableColumn(String languageBundleKey) {
-		return new TableColumn<>(WindowContext.getLocalizedText(languageBundleKey));
-	}
-
+	@SafeVarargs
 	public static <S, T> List<TableColumn<S, T>> getLocalizedTableColumns(Pair<String, String>... bundleKeyAndColumnNamesPairs) {
 		return Stream.of(bundleKeyAndColumnNamesPairs).map(pair -> {
 			final TableColumn<S, T> localizedTableColumn = getLocalizedTableColumn(pair.getFirst());
@@ -47,6 +40,13 @@ public class WindowContext {
 		}).collect(Collectors.toList());
 	}
 
+	private static String getLocalizedText(String languageBundleKey) {
+		return GradeBookApplication.getLanguageBundle().getString(languageBundleKey);
+	}
+
+	private static <S, T> TableColumn<S, T> getLocalizedTableColumn(String languageBundleKey) {
+		return new TableColumn<>(WindowContext.getLocalizedText(languageBundleKey));
+	}
 
 	public static void reload() {
 		GradeBookApplication.reload();

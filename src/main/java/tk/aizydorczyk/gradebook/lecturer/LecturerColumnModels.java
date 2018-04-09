@@ -1,7 +1,6 @@
 package tk.aizydorczyk.gradebook.lecturer;
 
 import javafx.scene.control.TableColumn;
-import tk.aizydorczyk.gradebook.infrastructure.Constants;
 import tk.aizydorczyk.gradebook.infrastructure.base.ColModel;
 
 import java.util.List;
@@ -34,7 +33,6 @@ import static tk.aizydorczyk.gradebook.infrastructure.Constants.SUBJECT_GRADE;
 import static tk.aizydorczyk.gradebook.infrastructure.Constants.SUBJECT_NAME;
 import static tk.aizydorczyk.gradebook.infrastructure.utility.WindowContext.getLocalizedTableColumns;
 
-@SuppressWarnings("unchecked")
 public enum LecturerColumnModels implements ColModel {
 	GRADE {
 		@Override
