@@ -16,7 +16,7 @@ import java.util.stream.Stream;
 public class WindowContext {
 
 	public static void setWindowProperties(WindowsProperties properties, String languageBundleKey) {
-		Stage primaryStage = GradeBookApplication.getPrimaryStage();
+		final Stage primaryStage = GradeBookApplication.getPrimaryStage();
 
 		primaryStage.setWidth(properties.getWidth());
 		primaryStage.setHeight(properties.getHeight());
@@ -27,7 +27,7 @@ public class WindowContext {
 
 
 	public static void setLanguageBundleLocale(String lng) {
-		ResourceBundle languageBundle = ResourceBundle.getBundle("languages.strings", new Locale(lng));
+		final ResourceBundle languageBundle = ResourceBundle.getBundle("languages.strings", new Locale(lng));
 		GradeBookApplication.setLanguageBundle(languageBundle);
 	}
 
@@ -39,8 +39,8 @@ public class WindowContext {
 		return new TableColumn<>(WindowContext.getLocalizedText(languageBundleKey));
 	}
 
-	public static <S, T> List<TableColumn<S, T>> getLocalizedTableColumns(Pair<String, String>... bundleKeyColumnNamesPairs) {
-		return Stream.of(bundleKeyColumnNamesPairs).map(pair -> {
+	public static <S, T> List<TableColumn<S, T>> getLocalizedTableColumns(Pair<String, String>... bundleKeyAndColumnNamesPairs) {
+		return Stream.of(bundleKeyAndColumnNamesPairs).map(pair -> {
 			final TableColumn<S, T> localizedTableColumn = getLocalizedTableColumn(pair.getFirst());
 			localizedTableColumn.setCellValueFactory(new PropertyValueFactory<>(pair.getSecond()));
 			return localizedTableColumn;

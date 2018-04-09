@@ -4,7 +4,7 @@ import javafx.scene.control.TableColumn;
 
 import java.util.List;
 
-@FunctionalInterface
 public interface ColModel {
 	<S, T> List<TableColumn<S, T>> getColumns();
+	String getButtonName();
 }

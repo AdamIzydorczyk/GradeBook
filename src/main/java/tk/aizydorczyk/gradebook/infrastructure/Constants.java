@@ -53,7 +53,17 @@ public enum Constants {
 	DEGREE("degree"),
 	LOGIN_WINDOW("loginWindow"),
 	STUDENT_WINDOW("studentWindow"),
-	LECTURER_WINDOW("lecturerWindow");
+	LECTURER_WINDOW("lecturerWindow"),
+	LECTURER_STUDENTS_BUTTON("lecturerStudentsButton"),
+	LECTURER_SUBJECTS_BUTTON("lecturerSubjectsButton"),
+	LECTURER_GRADE_BUTTON("lecturerGradeButton"),
+	STUDENT_SEMESTERS_BUTTON("studentSemestersButton"),
+	STUDENT_SUBJECTS_BUTTON("studentSubjectsButton"),
+	STUDENT_GRADES_BUTTON("studentGradesButton"),
+	STUDENT_GROUPS_BUTTON("studentGroupsButton"),
+	STUDENT_MEMBERS_OF_GROUP("studentMembersOfGroup"),
+	STUDENT_LECTURERS_BUTTON("studentLecturersButton");
+
 	private final String constant;
 
 	Constants(String constant) {
